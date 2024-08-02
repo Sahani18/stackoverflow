@@ -23,7 +23,7 @@ export default async function createAnswerCollection() {
     console.log("Answer collection created")
 
     // create indexes
-    databases.createIndex(db, answersCollection, "content", IndexType.Fulltext, ["content"], ["asc"]),
-        databases.createIndex(db, answersCollection, "questionId", IndexType.Unique, ["questionId"], ["asc"]),
-        databases.createIndex(db, answersCollection, "authorId", IndexType.Unique, ["authorId"], ["asc"])
+    // databases.createIndex(db, answersCollection, "content", IndexType.Fulltext, ["content"], ["asc"]),
+    //     databases.createIndex(db, answersCollection, "questionId", IndexType.Unique, ["questionId"], ["asc"]),
+    //     databases.createIndex(db, answersCollection, "authorId", IndexType.Unique, ["authorId"], ["asc"])
 }

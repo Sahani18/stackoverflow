@@ -1,8 +1,6 @@
 import { Permission } from "appwrite";
 import { db, questionCollection } from "../name";
 import { databases } from "./config";
-import { IndexType } from "node-appwrite";
-
 
 
 
@@ -30,6 +28,6 @@ export default async function createQuestionCollection() {
 
     // create indexes
     // TODO: Trial check and do manually from cloud
-    databases.createIndex(db, questionCollection, "title", IndexType.Fulltext, ["title"], ["asc"])
-    databases.createIndex(db, questionCollection, "content", IndexType.Fulltext, ["content"], ["asc"])
+    // databases.createIndex(db, questionCollection, "title", IndexType.Fulltext, ["title"], ["asc"])
+    // databases.createIndex(db, questionCollection, "content", IndexType.Fulltext, ["content"], ["asc"])
 }

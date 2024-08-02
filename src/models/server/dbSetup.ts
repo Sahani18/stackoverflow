@@ -3,11 +3,10 @@
 
 import { db } from "../name";
 import createCommentCollection from "./comment.collection";
-import createQuestionCollection from "./answer.collection";
 import createAnswerCollection from "./answer.collection";
 import createVoteCollection from "./vote.collection";
-//import getOrCreateStorageBucket from "./storage.collection";
 import { databases } from "./config";
+import createQuestionCollection from "./question.collection";
 
 
 export default async function getOrConnectDB() {
@@ -23,7 +22,7 @@ export default async function getOrConnectDB() {
                 createAnswerCollection(),
                 createCommentCollection(),
                 createVoteCollection(),
-                //  getOrCreateStorageBucket()
+
             ]);
             console.log("Collection  created")
             console.log("Database Connected")
